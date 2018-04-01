@@ -5,25 +5,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-
 /**
- * Author: Kaue Mirkai
- * Ra:81613004
+ * Nome: Kauê Victor Paz Garcia Mirkai.
+ * Ra:81613004.
  * Turma:CCP3AN-MCA
- * Documentação:Método que lista paises na tela listaPaises, recebe uma savedIntance e ao clickar em uma linha, ativa o metodo
- * que retorna outra activity
- *
+ * Professor:Bonato.
+ * Documentação:Classe listarPaisesActivity.
  */
-
 public class ListaPaisesActivity extends Activity {
     public static final String PAIS = "br.usjt.desmob.geodata.pais";
     Activity atividade;
-    ArrayList<Pais> paises;
-    ArrayList<String> nomes;
+    Pais[] paises;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +26,11 @@ public class ListaPaisesActivity extends Activity {
         setContentView(R.layout.activity_lista_paises);
         atividade = this;
         Intent intent = getIntent();
-        String continente = intent.getStringExtra(MainActivity.CHAVE);
-        paises = Data.listarPaises(continente);
-        nomes = Data.listarNomes(paises);
+
+        paises = (Pais[]) intent.getSerializableExtra(MainActivity.PAISES);
 
         ListView listView = (ListView) findViewById(R.id.lista_paises);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, nomes);
+        PaisAdapter adapter = new PaisAdapter(paises, this);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -48,7 +41,7 @@ public class ListaPaisesActivity extends Activity {
 
                 // manda para a tela de detalhe
                 Intent intent = new Intent(atividade, DetalhePaisActivity.class);
-                intent.putExtra(PAIS, paises.get(position));
+                intent.putExtra(PAIS, paises[position]);
 
                 startActivity(intent);
 

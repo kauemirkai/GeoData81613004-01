@@ -6,19 +6,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
+
+
+
+
 /**
- * Author: Kaue Mirkai
- * Ra:81613004
+ * Nome: Kauê Victor Paz Garcia Mirkai.
+ * Ra:81613004.
  * Turma:CCP3AN-MCA
- * Documentação:Main activity da aplicação. on create recebe uma savedInstanceState, carrega o spinner com a lista
- * e começa listarPaises;
- *
+ * Professor:Bonato.
+ * Documentação: MainActivity
  */
 
 public class MainActivity extends Activity {
     Spinner spinnerContinente;
     public static final String CHAVE = "br.usjt.desmob.geodata.txtContinente";
+    public static final String PAISES = "br.usjt.desmob.geodata.paises";
     String continente = "Todos";
+
+    /**
+     * Nome: Kauê Victor Paz Garcia Mirkai.
+     * Ra:81613004.
+     * Turma:CCP3AN-MCA
+     * Professor:Bonato.
+     * Documentação: Chamada do Spinner em strings.xml, onde estamos pegando os textos que aparecem no dropbox.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +40,29 @@ public class MainActivity extends Activity {
         spinnerContinente.setOnItemSelectedListener(new PaisSelecionado());
     }
 
+    /**
+     * Nome: Kauê Victor Paz Garcia Mirkai.
+     * Ra:81613004.
+     * Turma:CCP3AN-MCA
+     * Professor:Bonato.
+     * Documentação: Este metodo é chamado ao clickar no botão listar. Ele starta a proxima activity e passa a chave do continente
+     * sendo todos, ou um continente especifico
+     */
+
     public void listarPaises(View view){
         Intent intent = new Intent(this, ListaPaisesActivity.class);
 
         intent.putExtra(CHAVE, continente);
         startActivity(intent);
     }
+
+    /**
+     * Nome: Kauê Victor Paz Garcia Mirkai.
+     * Ra:81613004.
+     * Turma:CCP3AN-MCA
+     * Professor:Bonato.
+     * Documentação:
+     */
 
     private class PaisSelecionado implements AdapterView.OnItemSelectedListener {
         @Override

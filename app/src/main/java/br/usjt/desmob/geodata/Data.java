@@ -1,17 +1,27 @@
-package br.usjt.desmob.geodata;
+package br.usjt.desmob.geodata;;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Author: Kaue Mirkai
- * Ra:81613004
+ * Nome: Kauê Victor Paz Garcia Mirkai.
+ * Ra:81613004.
  * Turma:CCP3AN-MCA
- * Documentação:Classe de "Banco de dados" Da aplicação, aqui estão os arrays que são retornados em lista paises
- *
+ * Professor:Bonato.
+ * Documentação: A classe data, ao meu ver, esta servindo como um "banco de dados" E esta sendo acessada por outras classes para
+ * retornar os valores na tela de detalhesPaisActivity ela tem metodos como listar nomes, listar paises e listar todos.
  */
 
 public class Data {
+
+    /**
+     * Nome: Kauê Victor Paz Garcia Mirkai.
+     * Ra:81613004.
+     * Turma:CCP3AN-MCA
+     * Professor:Bonato.
+     * Documentação: Lista o nome de todos os paises de todos os continentes
+     * test
+     */
 
     public static ArrayList<String> listarNomes(ArrayList<Pais> paises){
         ArrayList<String> nomes = new ArrayList<>();
@@ -20,6 +30,16 @@ public class Data {
         }
         return nomes;
     }
+
+
+    /**
+     * Nome: Kauê Victor Paz Garcia Mirkai.
+     * Ra:81613004.
+     * Turma:CCP3AN-MCA
+     * Professor:Bonato.
+     * Documentação:
+     */
+
     public static ArrayList<Pais> listarPaises(String continente) {
         Pais[] lista;
         ArrayList<Pais> paises = new ArrayList<>();
@@ -41,6 +61,15 @@ public class Data {
         }
         return paises;
     }
+
+
+    /**
+     * Nome: Kauê Victor Paz Garcia Mirkai.
+     * Ra:81613004.
+     * Turma:CCP3AN-MCA
+     * Professor:Bonato.
+     * Documentação: Array list contendo todos os paises, o "banco de dados" da aplicação
+     */
 
     private static ArrayList<Pais> todosPaises() {
         ArrayList<Pais> paises = new ArrayList<>();
