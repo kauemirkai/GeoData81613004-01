@@ -1,6 +1,8 @@
 package br.usjt.desmob.geodata;
 
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -20,7 +22,7 @@ public class Pais implements Serializable{
     private String demonimo;
     private int populacao;
     private int area;
-    private String bandeira;
+    private Bitmap bandeira;
     private double gini;
     private ArrayList<String> idiomas;
     private ArrayList<String> moedas;
@@ -29,6 +31,15 @@ public class Pais implements Serializable{
     private ArrayList<String> fronteiras;
     private double latitude;
     private double longitude;
+
+
+    public Bitmap getBandeira() {
+        return bandeira;
+    }
+
+    public void setBandeira(Bitmap bandeira) {
+        this.bandeira = bandeira;
+    }
 
     /**
      * Nome: Kauê Victor Paz Garcia Mirkai.
@@ -102,13 +113,6 @@ public class Pais implements Serializable{
         this.area = area;
     }
 
-    public String getBandeira() {
-        return bandeira;
-    }
-
-    public void setBandeira(String bandeira) {
-        this.bandeira = bandeira;
-    }
 
     public double getGini() {
         return gini;

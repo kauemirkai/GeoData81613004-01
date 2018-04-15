@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://C:\Users\kauemirkai\Downloads\Bonato\GeoData-1\GeoData-1\GeoData.iml" filepath="C:\Users\kauemirkai\Downloads\Bonato\GeoData-1\GeoData-1\GeoData.iml" />
       <module fileurl="file://$PROJECT_DIR$/GeoData81613004-01.iml" filepath="$PROJECT_DIR$/GeoData81613004-01.iml" />
+      <module fileurl="file://C:\Users\kauemirkai\Desktop\geodataentregavel\GeoData81613004-01\GeoData81613004-01.iml" filepath="C:\Users\kauemirkai\Desktop\geodataentregavel\GeoData81613004-01\GeoData81613004-01.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\kauemirkai\Desktop\geodataentregavel\GeoData81613004-01\app\app.iml" filepath="C:\Users\kauemirkai\Desktop\geodataentregavel\GeoData81613004-01\app\app.iml" />
     </modules>
   </component>
 </project>
