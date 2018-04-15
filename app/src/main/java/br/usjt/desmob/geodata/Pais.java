@@ -23,6 +23,7 @@ public class Pais implements Serializable{
     private int populacao;
     private int area;
     private Bitmap bandeira;
+    private String figura;
     private double gini;
     private ArrayList<String> idiomas;
     private ArrayList<String> moedas;
@@ -30,6 +31,8 @@ public class Pais implements Serializable{
     private ArrayList<String> fusos;
     private ArrayList<String> fronteiras;
     private double latitude;
+
+
     private double longitude;
 
 
@@ -39,6 +42,15 @@ public class Pais implements Serializable{
 
     public void setBandeira(Bitmap bandeira) {
         this.bandeira = bandeira;
+    }
+
+
+    public String getFigura() {
+        return figura;
+    }
+
+    public void setFigura(String figura) {
+        this.figura = figura;
     }
 
     /**
